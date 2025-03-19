@@ -7,7 +7,7 @@
                 message: "success",
                 data: ""  // Keep this empty to match the expected format
             };
-
+            window.parent.postMessage(JSON.stringify({ message: "init_complete" }), "*");
             window.parent.postMessage(JSON.stringify(payload), "*"); 
         }
 
@@ -17,6 +17,6 @@
     </script>
 </head>
 <body>
-    <h1>Exploit Page</h1>
+    <h1>Flag41 - 1</h1>
 </body>
 </html>
