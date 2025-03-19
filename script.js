@@ -1,5 +1,5 @@
 <script>
-    fetch("file:///data/data/io.hextree.attacksurface/token.txt")
+    fetch("file:///data/data/io.hextree.attacksurface/files/token.txt")
         .then(response => response.text())
         .then(data => {
             document.body.innerHTML = "<pre>" + data + "</pre>";
