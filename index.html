@@ -8,15 +8,12 @@
                 data: ""  // Keep this empty to match the expected format
             };
             window.parent.postMessage(JSON.stringify({ message: "init_complete" }), "*");
-            window.parent.postMessage(JSON.stringify(payload), "*"); 
+            setTimeout(() => window.parent.postMessage(JSON.stringify({ message: "success" })), 3000);
         }
 
-        window.onload = function () {
-            setTimeout(sendSuccessMessage, 1000); // Wait for WebView to initialize
-        };
     </script>
 </head>
 <body>
-    <h1>Flag41 - 1</h1>
+    <h1>Flag41 - 2</h1>
 </body>
 </html>
